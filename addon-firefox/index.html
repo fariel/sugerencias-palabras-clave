@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <script type="text/javascript" src="jquery.tools.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="tooltip.css"/>
+        <link rel="stylesheet" type="text/css" href="tabs-accordion.css"/>
+        <title>Sugerencias de Palabras Clave</title>
+    </head>
+    <body>
+        <table id="help" align="center" style="font-size: 13pt" color:black>
+            <tr>
+                <td><img src="img/search1.png"></td>
+                <td><b>Sugerencias</b></td>
+                <td><img title="Para copiar texto, primero seleccionar texto deseado y luego presionar Crl + C (Control + C)." src="img/ayudita.png"></td>
+            </tr>  
+        </table>
+<script>
+// initialize tooltip   width="20px" height="20px"
+$("#help img[title]").tooltip({
+   // tweak the position
+   offset: [10, 2],
+   // use the "slide" effect
+   effect: 'slide'
+  // add dynamic plugin with optional configuration for bottom edge
+}).dynamic({ bottom: { direction: 'down', bounce: true } });
+</script>
+
+<!-- activate tabs with JavaScript -->
+<script>
+  $(function() {
+    $("#accordion").tabs(
+    "#accordion div.pane",
+    {tabs: 'h2', effect: 'slide', initialIndex: null}
+  );
+    });
+</script>
+
+<div id='accordion'>
+           <h2 style='font-size:9pt; color:black'><b>1&deg; sugerencia: </b></h2><div class='pane' style='display:block'>
+           <h3 style='font-size:9pt; color:black'><b>Palabras clave: </b></h3> <p style='font-size:9pt; color:black' id="sug1"></p>
+           </div>
+           <h2 style='font-size:9pt; color:black'><b>2&deg; sugerencia: </b></h2><div class='pane'>
+           <h3 style='font-size:9pt; color:black'><b>Palabras clave: </b></h3> <p style='font-size:9pt; color:black' id="sug2"></p>
+           </div>
+           <h2 style='font-size:9pt; color:black'><b>3&deg; sugerencia: </b></h2><div class='pane'>
+           <h3 style='font-size:9pt; color:black'><b>Palabras clave: </b></h3> <p style='font-size:9pt; color:black' id="sug3"></p>
+           </div>           
+</div>
+</body>
+</html>

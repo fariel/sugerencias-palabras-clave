@@ -1,0 +1,15 @@
+body{
+    font-family:"Arial";
+    color: black;
+    background: #D0D0D0; 
+}
+
+.tooltip {
+    display:none;
+    background: transparent url(img/tooltip/black2.png);
+    font-size:12px;
+    height:50px;
+    width:150px;
+    padding:25px;
+    color:#eee;
+}
